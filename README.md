@@ -1,6 +1,6 @@
 # API 
 https://pokemontrainerislit.herokuapp.com   /trainers
-[link](https://github.com/MGylden/noroff-assignment-api/blob/master/docs/pokemon-trainer.md)
+[link]
 
 https://github.com/MGylden/noroff-assignment-api/blob/master/docs/pokemon-trainer.md
 
