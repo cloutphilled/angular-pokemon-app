@@ -1,5 +1,7 @@
 export const environment = {
   production: false,
-  apiUsers: "https://pokemontrainerislit.herokuapp.com/trainers",
+  apiKey: "https://pokemontrainerapistorethis.herokuapp.com/",
+  apiUsers: "https://pokemontrainerapistorethis.herokuapp.com/trainers",
+  apiPokemons: "https://pokeapi.co/api/v2/pokemon/",
 };
 
