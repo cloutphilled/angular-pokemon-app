@@ -1,3 +1,9 @@
+# API 
+https://pokemontrainerislit.herokuapp.com   /trainers
+[link](https://github.com/MGylden/noroff-assignment-api/blob/master/docs/pokemon-trainer.md)
+
+https://github.com/MGylden/noroff-assignment-api/blob/master/docs/pokemon-trainer.md
+
 # NgPokemontrainer
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.3.
