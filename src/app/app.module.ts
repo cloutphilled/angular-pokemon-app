@@ -8,6 +8,7 @@ import { LoginPage } from './pages/login/login.page';
 import { PokemonsPage } from './pages/pokemons/pokemons.page';
 import { ProfilePage } from './pages/profile/profile.page';
 import { LoginFormComponent } from './components/login-form/login-form.component';
+import { PokemonsListComponent } from './components/pokemons-list/pokemons-list.component';
 
 //Decorator
 @NgModule({
@@ -16,7 +17,8 @@ import { LoginFormComponent } from './components/login-form/login-form.component
     LoginPage,
     PokemonsPage,
     ProfilePage,
-    LoginFormComponent
+    LoginFormComponent,
+    PokemonsListComponent
   ],
   imports: [
     BrowserModule,
