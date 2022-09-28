@@ -31,7 +31,7 @@ export class LoginService {
   private checkUsername(username:string): Observable<User | undefined> {
     return this.http.get<User[]>(`${apiUsers}?username=${username}`)
       .pipe(
-        map((response: User[]) => response.pop())
+        map((response: User[]) => response.pop()) 
       )
     }
 
@@ -39,8 +39,8 @@ export class LoginService {
   private createUser(username: string): Observable<User>{
     //user
     const user = {
-    
-      username
+      username,
+      pokemons: [],
     };
 
     //headers -> api key
@@ -48,6 +48,7 @@ export class LoginService {
       "Content-Type": "application/json",
       "x-api-key": apiKey
     });
+
     //POST - create item on server
     return this.http.post<User>(apiUsers, user, {
       headers
