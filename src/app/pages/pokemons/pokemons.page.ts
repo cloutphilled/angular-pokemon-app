@@ -1,5 +1,6 @@
+import { ReturnStatement } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
-import { Pokemons } from 'src/app/models/pokemons.models';
+import { Pokemon } from 'src/app/models/pokemons.models';
 import { PokemonsPageService } from 'src/app/services/pokemons-page.service';
 
 @Component({
@@ -9,8 +10,8 @@ import { PokemonsPageService } from 'src/app/services/pokemons-page.service';
 })
 export class PokemonsPage implements OnInit {
 
-  get pokemons(): Pokemons[] {
-    return this.pokemonsPageService.pokemons;
+  get pokemon(): Pokemon[] {
+    return this.pokemonsPageService.pokemon;
   }
 
   get loading(): boolean {
@@ -21,12 +22,14 @@ export class PokemonsPage implements OnInit {
     return this.pokemonsPageService.error;
   }
 
-  constructor( 
-    private readonly pokemonsPageService: PokemonsPageService )
-  {}
+  constructor(
+    private readonly pokemonsPageService: PokemonsPageService 
+    ){}
 
-  ngOnInit(): void {
-    this.pokemonsPageService.findAllPokemons();
+   ngOnInit(): void  {
+     this.pokemonsPageService.findAllPokemons();
   }
+
+  
 
 }

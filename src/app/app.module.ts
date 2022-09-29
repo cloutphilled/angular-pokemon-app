@@ -9,6 +9,8 @@ import { PokemonsPage } from './pages/pokemons/pokemons.page';
 import { ProfilePage } from './pages/profile/profile.page';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { PokemonsListComponent } from './components/pokemons-list/pokemons-list.component';
+import { PokemonsListItemComponent } from './components/pokemons-list-item/pokemons-list-item.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 //Decorator
 @NgModule({
@@ -16,9 +18,12 @@ import { PokemonsListComponent } from './components/pokemons-list/pokemons-list.
     AppComponent,
     LoginPage,
     PokemonsPage,
+    PokemonsListComponent,
     ProfilePage,
     LoginFormComponent,
-    PokemonsListComponent
+    PokemonsListItemComponent,
+    NavbarComponent,
+    
   ],
   imports: [
     BrowserModule,
