@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable, of, switchMap } from 'rxjs';
+import { map, Observable, of, switchMap, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { User } from '../models/user.model';
 
@@ -27,12 +27,11 @@ export class LoginService {
       )
   }
 
-
   // Check if user exists
-  private checkUsername(username:string): Observable<User | undefined {
+  private checkUsername(username:string): Observable<User | undefined> {
     return this.http.get<User[]>(`${apiUsers}?username=${username}`)
       .pipe(
-        map((response: User[]) => response.pop())
+        map((response: User[]) => response.pop()) 
       )
     }
 
@@ -49,6 +48,7 @@ export class LoginService {
       "Content-Type": "application/json",
       "x-api-key": apiKey
     });
+
     //POST - create item on server
     return this.http.post<User>(apiUsers, user, {
       headers
