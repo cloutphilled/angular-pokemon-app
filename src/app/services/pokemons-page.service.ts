@@ -38,6 +38,11 @@ export class PokemonsPageService {
   }
 //Find all pokemon function - Including pictures(sprites)
   public findAllPokemons(): void {
+
+    if(this._pokemon.length > 0 || this.loading) {
+      return;
+    }
+
     this._loading = true;
     this.http.get<Pokemon[]>(apiPokemons)
     .pipe(
