@@ -35,6 +35,10 @@ The following technologies have been used to develop this project:
 
 ## Setup
 
+```
+log in with the username 'ash'
+```
+
 [Link to heroku](https://pokemontrainerislit.herokuapp.com/)
 
 If you decide to download the source code and try it for yourself you must have Node.js installed.
