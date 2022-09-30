@@ -2,6 +2,7 @@
 <li *ngIf="pokemon">
     <section>
         <img [src]="pokemon.img" [alt]="pokemon.name" class="w-40"/>
+        <span> {{pokemon.name}}</span>
     </section>
     <!-- <section>
     <span> Body: {{pokemon.abilities}} gonna need api work for this one
