@@ -5,6 +5,7 @@ import { environment } from 'src/environments/environment';
 import { Pokemon } from '../models/pokemons.models';
 import { User } from '../models/user.model';
 import { PokemonService } from './pokemon.service';
+import { PokemonsPageService } from './pokemons-page.service';
 import { UserService } from './user.service';
 
 const { apiKey, apiUsers } = environment
@@ -16,7 +17,7 @@ export class FavoriteService {
 
   constructor(
     private http: HttpClient,
-    private readonly pokemonService: PokemonService,
+    private readonly pokemonService: PokemonsPageService,
     private readonly userService: UserService
   ) { }
 
