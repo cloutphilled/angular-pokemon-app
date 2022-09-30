@@ -44,7 +44,7 @@ When Node.js is installed the following CLI should be used to launch the app
 npm install -> ng serve
 ````
 
-![Thumbs up](/public/thumbsup.gif)
+![Thumbs up](/assets/200w.gif)
 
 
 Peace
