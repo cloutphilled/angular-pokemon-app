@@ -2,7 +2,11 @@
 module.exports = {
   content: ['./src/**/*.{html,ts}', './projects/**/*.{html,ts}'],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'grass-pattern': "url('/assets/img/Grass_Type.png')",
+      }
+    },
   },
   plugins: [],
  }
