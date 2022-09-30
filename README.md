@@ -49,4 +49,4 @@ npm install -> ng serve
 
 Peace
 
-Mathias Kastrup Gylden, Vincent Rosenørn-Due, Phillip Friis Petersen
+Vincent Rosenørn-Due, Phillip Friis Petersen, Mathias Kastrup Gylden
