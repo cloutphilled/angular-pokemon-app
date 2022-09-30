@@ -54,6 +54,4 @@ export class LoginService {
       headers
     })
   }
-
-  // If user or created user -> store the user
 }

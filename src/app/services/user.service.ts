@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { StorageKeys } from '../enums/storage-keys.enum';
-import { Pokemon } from '../models/pokemon.models';
+import { Pokemon } from '../models/pokemons.models';
 import { User } from '../models/user.model';
 import { StorageUtil } from '../utils/storage.utils';
 
@@ -8,9 +8,7 @@ import { StorageUtil } from '../utils/storage.utils';
   providedIn: 'root'
 })
 export class UserService {
-
   
-
   //? after user is same as | undefined
   private _user?: User;
 
