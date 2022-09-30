@@ -13,7 +13,9 @@ import { PokemonsListComponent } from './components/pokemons-list/pokemons-list.
 import { PokemonsListItemComponent } from './components/pokemons-list-item/pokemons-list-item.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
+import { FavoriteButtonComponent } from './components/favorite-button/favorite-button.component';
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
+
 
 //Decorator
 @NgModule({
@@ -24,6 +26,7 @@ import { PokemonListComponent } from './components/pokemon-list/pokemon-list.com
     PokemonsListComponent,
     ProfilePage,
     LoginFormComponent,
+    FavoriteButtonComponent
     PokemonsListItemComponent,
     NavbarComponent,
   ],
