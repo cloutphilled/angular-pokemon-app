@@ -25,7 +25,7 @@ The following technologies have been used to develop this project:
 - Node.js
 - Angular
 
-[Link to Figma wireframe][(https://www.figma.com/file/iTVj49d7h04SW5Ai8K10uZ/pokemon-trainer?node-id=0%3A1)]
+[Link to Figma wireframe](https://www.figma.com/file/iTVj49d7h04SW5Ai8K10uZ/pokemon-trainer?node-id=0%3A1)
 
 ## Features
 - The user must create a new user account in order to use the application
@@ -35,7 +35,7 @@ The following technologies have been used to develop this project:
 
 ## Setup
 
-[Link to heroku](Placeholder TBA)
+[Link to heroku](https://pokemontrainerislit.herokuapp.com/)
 
 If you decide to download the source code and try it for yourself you must have Node.js installed.
 When Node.js is installed the following CLI should be used to launch the app
