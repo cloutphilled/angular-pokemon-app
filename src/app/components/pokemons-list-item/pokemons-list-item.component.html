@@ -1,15 +1,14 @@
 
 <div *ngIf="pokemon">
-    <section>
+    
+    
+        <section>
         <img [src]="pokemon.img" [alt]="pokemon.name" />
         <span> {{pokemon.name}}</span>
-    </section>
-    <!-- <section>
-    <span> Body: {{pokemon.abilities}} gonna need api work for this one
-      
+        </section>
+    <div>
 
-    </span>
-
-    </section> -->
-    <!-- <span> {{pokemon.name }}</span> -->
+    </div>
+    <!-- <app-favorite-button [pokemonId]="pokemon.id"></app-favorite-button>  -->
+    <!-- KNAPPEN VIKER IKKE OG DET LOADER IKKE -->
 </div>
