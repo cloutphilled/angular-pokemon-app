@@ -1,4 +1,4 @@
-import { Pokemon } from "./pokemon.models"
+import { Pokemon } from "../models/pokemons.models"
 
 export interface User {
     id: number
