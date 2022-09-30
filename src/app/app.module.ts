@@ -11,6 +11,7 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { PokemonsListComponent } from './components/pokemons-list/pokemons-list.component';
 import { PokemonsListItemComponent } from './components/pokemons-list-item/pokemons-list-item.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { FormsModule } from '@angular/forms';
 
 //Decorator
 @NgModule({
@@ -29,6 +30,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
