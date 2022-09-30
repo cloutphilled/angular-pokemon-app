@@ -9,6 +9,7 @@ import { PokemonsPage } from './pages/pokemons/pokemons.page';
 import { ProfilePage } from './pages/profile/profile.page';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { FormsModule } from '@angular/forms';
+import { FavoriteButtonComponent } from './components/favorite-button/favorite-button.component';
 
 //Decorator
 @NgModule({
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     LoginPage,
     PokemonsPage,
     ProfilePage,
-    LoginFormComponent
+    LoginFormComponent,
+    FavoriteButtonComponent
   ],
   imports: [
     BrowserModule,
