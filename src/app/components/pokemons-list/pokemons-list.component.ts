@@ -13,7 +13,6 @@ export class PokemonsListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    
   }
 
 }

@@ -54,10 +54,11 @@ export class PokemonsPageService {
     .subscribe({
       next: (pokemon: Pokemon[]) => {
         this._pokemon = pokemon;
-        this._pokemon.map(pokemon => pokemon.id = this.getPokemonId(pokemon.url));
-        this._pokemon.map(p => p.img = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${p.id}.gif`)       
+        this._pokemon.forEach(pokemon => pokemon.id = this.getPokemonId(pokemon.url));
+        this._pokemon.forEach(p => p.img = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${p.id}.gif`)       
 //https://stackoverflow.com/questions/39065921/what-do-raw-githubusercontent-com-urls-represent -Information for the raw.githubusercontent
-// GIF https://github.com/PokeAPI/sprites/raw/master/sprites/pokemon/versions/generation-v/black-white/animated/25.gif
+// GIF https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${p.id}.gif
+// PIC https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${p.id}.png
       },
       error:(error: HttpErrorResponse) => {
         this._error = error.message;

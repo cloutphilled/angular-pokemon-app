@@ -1,12 +1,12 @@
 <nav class="bg-black opacity-75 flex justify-between items-center p-4 sticky top-0 w-full z-50 text-white">
-    <span class="font-bold">Pokemans </span>
+    <span class="w-40"><img src="/assets/img/pokelogo.png" alt="Pokemans"></span>
     <ng-container *ngIf="user !==undefined">
         <ul class="flex">
             <li class="px-4">
-                <a routerLink="/pokemons">Pokemans</a>
+                <a routerLink="/pokemons"><img class="w-14"src="/assets/img/pokeball.gif" alt="Pokedex"/></a>
             </li>
             <li class="scroll-px-2">
-                <a routerLink="/profile">Profile</a>
+                <a routerLink="/profile"><img class="w-14" src="/assets/img/playerAvatar.gif" alt="{{user.username}}"/></a>
             </li>
         </ul>
     </ng-container>

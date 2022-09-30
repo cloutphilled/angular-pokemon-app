@@ -25,7 +25,7 @@ The following technologies have been used to develop this project:
 - Node.js
 - Angular
 
-[Link to Figma wireframe][(https://www.figma.com/file/iTVj49d7h04SW5Ai8K10uZ/pokemon-trainer?node-id=0%3A1)]
+[Link to Figma wireframe](https://www.figma.com/file/iTVj49d7h04SW5Ai8K10uZ/pokemon-trainer?node-id=0%3A1)
 
 ## Features
 - The user must create a new user account in order to use the application
@@ -49,4 +49,4 @@ npm install -> ng serve
 
 Peace
 
-Mathias Kastrup Gylden, Vincent Rosenørn-Due, Phillip Friis Petersen
+Vincent Rosenørn-Due, Phillip Friis Petersen, Mathias Kastrup Gylden

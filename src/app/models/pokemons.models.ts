@@ -21,4 +21,5 @@ export interface Pokemon {
     name: string;
     url: string;
     img: string;
+    Abilities: Ability[];
 }
