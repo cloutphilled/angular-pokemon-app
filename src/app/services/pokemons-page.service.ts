@@ -28,6 +28,15 @@ export class PokemonsPageService {
 
   constructor(private readonly http: HttpClient) { }
 
+  public getPokemonId(url: string): string {
+
+    let words = url.split('/');
+    let id = words[words.length - 2];
+
+    return id;
+
+  }
+//Find all pokemon function - Including pictures(sprites)
   public findAllPokemons(): void {
     this._loading = true;
     this.http.get<Pokemon[]>(apiPokemons)
@@ -39,8 +48,10 @@ export class PokemonsPageService {
       )
     .subscribe({
       next: (pokemon: Pokemon[]) => {
-        this._pokemon = pokemon;       
-
+        this._pokemon = pokemon;
+        this._pokemon.map(pokemon => pokemon.id = this.getPokemonId(pokemon.url));
+        this._pokemon.map(p => p.img = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${p.id}.png`)       
+//https://stackoverflow.com/questions/39065921/what-do-raw-githubusercontent-com-urls-represent -Information for the raw.githubusercontent
       },
       error:(error: HttpErrorResponse) => {
         this._error = error.message;

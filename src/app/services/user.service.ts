@@ -8,9 +8,7 @@ import { StorageUtil } from '../utils/storage.utils';
   providedIn: 'root'
 })
 export class UserService {
-
   
-
   //? after user is same as | undefined
   private _user?: User;
 

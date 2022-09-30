@@ -13,18 +13,37 @@ export class PokemonCatalogueService {
 
   private _pokemons: Pokemon[] = [];
   private _error: String = "";
+  private _url: String = "";
 
   get pokemons(): Pokemon[]{
-    return this._pokemons
+    return this._pokemons;
   }
   get error(): String{
     return this._error;
   }
+  get url(): String{
+    return this._url
+  }
+
 
   private _loading: boolean = false;
 
 
   constructor(private readonly http: HttpClient) {  }
+
+  public getPokemonId(url: string): string {
+
+    let words = url.split('/');
+    let id = words[words.length - 2];
+
+    return id;
+
+}
+
+
+  
+
+
 
   public findAllPokemons(): void{
     this._loading = true;
@@ -37,6 +56,9 @@ export class PokemonCatalogueService {
     .subscribe({
       next: (pokemons: Pokemon[]) => {
         this._pokemons = pokemons
+        this._pokemons.map(pokemons => pokemons.id = this.getPokemonId(pokemons.url));
+        this._pokemons.map(p => p.img = `https://github.com/PokeAPI/sprites/tree/master/sprites/pokemon/${p.id}.png`)
+
       },
       error: () => {
         error: (error: HttpErrorResponse) => {
@@ -45,6 +67,13 @@ export class PokemonCatalogueService {
       }
     })
   }
+
+  public pokemonById(id: String): Pokemon | undefined {
+    return this._pokemons.find((pokemon: Pokemon) => pokemon.id === id)
+  }
+
+ 
+
 
 }
 
