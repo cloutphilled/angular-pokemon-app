@@ -1,4 +1,5 @@
 
+
 export interface PokemonChar {
     id: number;
     name: string;
@@ -20,4 +21,3 @@ export interface Pokemon {
     name: string;
     url: string;
     img: string;
-}
