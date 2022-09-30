@@ -1,7 +1,7 @@
 
-<li *ngIf="pokemon">
+<div *ngIf="pokemon">
     <section>
-        <img [src]="pokemon.img" [alt]="pokemon.name" class="w-40"/>
+        <img [src]="pokemon.img" [alt]="pokemon.name" />
         <span> {{pokemon.name}}</span>
     </section>
     <!-- <section>
@@ -12,4 +12,4 @@
 
     </section> -->
     <!-- <span> {{pokemon.name }}</span> -->
-</li>
+</div>

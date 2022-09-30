@@ -1,14 +1,7 @@
-<ul>
-    <!-- <li *ngFor="let pokemon of pokemon"> -->
-        <!-- <span>{{ pokemon.name}} -->
-    <app-pokemons-list-item *ngFor="let pokemon of pokemon"
-    [pokemon]="pokemon"></app-pokemons-list-item>        
+<div class="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-6 xl:gap-x-8 justify-items-center overflow-hidden">
 
-         
-    
-    
-    
-     
-    
-</ul>
+    <app-pokemons-list-item *ngFor="let pokemon of pokemon"
+    [pokemon]="pokemon" class="shadow bg-black bg-opacity-50 rounded text-white w-full content-center justify-center p-20"></app-pokemons-list-item>
+        
+</div>
 
