@@ -13,7 +13,7 @@ export class FavoriteButtonComponent implements OnInit {
 
   public loading: boolean = false;
   public isFavorite: boolean = false;
-  @Input() pokemonId: number = 0;
+  @Input() pokemonId: string = "";
 
   constructor(
     private userService: UserService,

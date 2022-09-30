@@ -52,7 +52,7 @@ export class PokemonService {
   }
 
 
-  public pokemonById(id: number): Pokemon | undefined {
+  public pokemonById(id: string): Pokemon | undefined {
     return this._pokemons.find((pokemon: Pokemon) => pokemon.id === id);
   }
 }

@@ -1,17 +1,14 @@
-<nav class="bg-yellow-500 flex justify-between items-center p-4 fixed w-full">
+<nav class="bg-yellow-500 flex justify-between items-center p-4 fixed w-full z-50">
     <span class="font-bold">Pokemans </span>
     <ng-container *ngIf="user !==undefined">
-
-
-
+        <ul class="flex">
+            <li class="px-4">
+                <a routerLink="/pokemons">Pokemans</a>
+            </li>
+            <li class="scroll-px-2">
+                <a routerLink="/profile">Profile</a>
+            </li>
+        </ul>
     </ng-container>
-    <ul class="flex">
-        <li class="px-4">
-            <a routerLink="/pokemons">Pokemans</a>
-        </li>
-        <li>
-            <a routerLink="/profile">Profile</a>
-
-        </li>
-    </ul>
+    
 </nav>

@@ -2,7 +2,7 @@ import { HttpClient, HttpHandler, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Pokemon } from '../models/pokemon.models';
+import { Pokemon } from '../models/pokemons.models';
 import { User } from '../models/user.model';
 import { PokemonService } from './pokemon.service';
 import { UserService } from './user.service';
@@ -21,7 +21,7 @@ export class FavoriteService {
   ) { }
 
 
-  public addToFavorites(pokemonId: number): Observable<User> {
+  public addToFavorites(pokemonId: string): Observable<User> {
 
     if(!this.userService.user){
       throw new Error('addToFavorites: There is no user');
