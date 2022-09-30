@@ -2,7 +2,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { finalize } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Pokemon } from '../models/pokemon.models';
+import { Pokemon } from '../models/pokemons.models';
 
 
 const { apiPokemons } = environment;
@@ -52,7 +52,7 @@ export class PokemonService {
   }
 
 
-  public pokemonById(id: number): Pokemon | undefined {
+  public pokemonById(id: string): Pokemon | undefined {
     return this._pokemons.find((pokemon: Pokemon) => pokemon.id === id);
   }
 }

@@ -26,7 +26,7 @@ import { PokemonListComponent } from './components/pokemon-list/pokemon-list.com
     PokemonsListComponent,
     ProfilePage,
     LoginFormComponent,
-    FavoriteButtonComponent
+    FavoriteButtonComponent,
     PokemonsListItemComponent,
     NavbarComponent,
   ],

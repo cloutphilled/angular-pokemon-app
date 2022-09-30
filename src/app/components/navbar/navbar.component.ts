@@ -15,8 +15,6 @@ export class NavbarComponent implements OnInit {
 
   }
 
-
-
   constructor(
     private readonly userService: UserService
   ) { }

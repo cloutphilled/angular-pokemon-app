@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { StorageKeys } from '../enums/storage-keys.enum';
-import { Pokemon } from '../models/pokemon.models';
+import { Pokemon } from '../models/pokemons.models';
 import { User } from '../models/user.model';
 import { StorageUtil } from '../utils/storage.utils';
 
@@ -26,7 +26,7 @@ export class UserService {
     this._user = StorageUtil.storageRead<User>(StorageKeys.User);
    }
 
-   public inFavorites(pokemonId: number): boolean {
+   public inFavorites(pokemonId: string): boolean {
     if(this._user) {
       return Boolean(this.user?.pokemon.find((pokemon: Pokemon) => pokemon.id === pokemonId))
     }
@@ -39,7 +39,7 @@ export class UserService {
     }
    }
 
-   public removeFromFavorite(pokemonId: number): void {
+   public removeFromFavorite(pokemonId: string): void {
     if(this._user) {
       this._user.pokemon = this._user.pokemon.filter((pokemon: Pokemon) => pokemon.id !== pokemonId)
     }

@@ -1,1 +1,18 @@
-<p>favorite-button works!</p>
+<aside>
+    <button
+        (click)="onFavoriteClick()">
+        <ng-container>
+            <ng-container>
+                <ng-template>
+                    <span></span>
+                </ng-template>
+                <ng-template>
+                    <span></span>
+                </ng-template>
+            </ng-container>
+            <ng-template #spinner>
+                <span class="material-icons animate-spin">refresh</span>
+            </ng-template>
+        </ng-container>
+    </button>
+</aside>
