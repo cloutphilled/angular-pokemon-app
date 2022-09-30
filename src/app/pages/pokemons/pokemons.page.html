@@ -1,1 +1,6 @@
-<p>pokemons works!</p>
+<main class="container mx-auto p-4">
+
+    <p *ngIf="loading">Loading pokemans...</p>
+    <app-pokemons-list [pokemon]="pokemon"></app-pokemons-list>
+</main>
+
