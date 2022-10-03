@@ -20,8 +20,7 @@ This project is part of the Noroff Fullstack Java bootcamp course. It's the 3rd 
 The following technologies have been used to develop this project:
 - Figma for wireframing and sketching out the visual style of the application
 - HTML, CSS, JavaScript, TypeScript by using the Angular library
-- CSS in TypeScript code by using 'styled-components'
-- Bootstrap for icons
+- TailwindCSS
 - Node.js
 - Angular
 
