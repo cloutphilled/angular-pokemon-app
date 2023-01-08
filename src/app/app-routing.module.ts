@@ -9,7 +9,7 @@ const routes: Routes = [
     {
         path: "",
         pathMatch: "full",
-        redirectTo: "/login",
+        redirectTo: "/pokemons",
     },
     {
         path: "login",
@@ -18,12 +18,12 @@ const routes: Routes = [
     {
         path: "pokemons",
         component: PokemonsPage,
-        canActivate: [AuthGuard]
+        // canActivate: [AuthGuard]
     },
     {
         path: "profile",
         component: ProfilePage,
-        canActivate: [AuthGuard]
+        // canActivate: [AuthGuard]
     }
 
 ]
