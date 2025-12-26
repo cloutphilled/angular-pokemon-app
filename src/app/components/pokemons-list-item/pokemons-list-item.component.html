@@ -1,17 +1,14 @@
 
-<div *ngIf="pokemon" class="relative">
-        <section>
-        <img class="object-fill w-full h-auto" [src]="pokemon.img" [alt]="pokemon.name" />
-        
-        <div class="relative flex-box py-10 items-center">
+<div *ngIf="pokemon" class="relative flex flex-col">
+    <section class="flex flex-col items-center">
+        <div class="h-16 flex items-end justify-center">
+            <img class="max-h-16 object-contain" [src]="pokemon.img" [alt]="pokemon.name" />
+        </div>
+        <div class="relative flex py-2 items-center w-full">
             <div class="flex-grow border-t border-gray-400"></div>
-            <span class="uppercase">{{pokemon.name}}</span>
+            <span class="uppercase px-1 text-xs">{{pokemon.name}}</span>
             <div class="flex-grow border-t border-gray-400"></div> 
         </div>
-        </section>
-    <!-- <div>
-
-    </div> -->
+    </section>
     <app-favorite-button [pokemonId]="pokemon.id"></app-favorite-button> 
-    <!-- KNAPPEN VIKER IKKE OG DET LOADER IKKE -->
 </div>

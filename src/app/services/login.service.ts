@@ -11,15 +11,17 @@ const { apiUsers, apiKey } = environment;
 })
 export class LoginService {
 
-  // Dependency Injection
   constructor(private http: HttpClient) { }
 
-  // Login
   public login(username: string): Observable<User> {
+    // Use localStorage for user storage
+    if (apiUsers === 'localStorage') {
+      return this.loginWithLocalStorage(username);
+    }
     return this.checkUsername(username)
       .pipe(
         switchMap((user: User | undefined) => {
-          if(user ==undefined){
+          if(user == undefined){
             return this.createUser(username);
           }
           return of(user);
@@ -27,7 +29,19 @@ export class LoginService {
       )
   }
 
-  // Check if user exists
+  private loginWithLocalStorage(username: string): Observable<User> {
+    const users = JSON.parse(localStorage.getItem('pokemon_users') || '[]');
+    let user = users.find((u: User) => u.username === username);
+    
+    if (!user) {
+      user = { id: Date.now(), username, pokemon: [] };
+      users.push(user);
+      localStorage.setItem('pokemon_users', JSON.stringify(users));
+    }
+    
+    return of(user);
+  }
+
   private checkUsername(username:string): Observable<User | undefined> {
     return this.http.get<User[]>(`${apiUsers}?username=${username}`)
       .pipe(
@@ -35,21 +49,17 @@ export class LoginService {
       )
     }
 
-  // Create user
   private createUser(username: string): Observable<User>{
-    //user
     const user = {
       username,
       pokemons: [],
     };
 
-    //headers -> api key
     const headers = new HttpHeaders({
       "Content-Type": "application/json",
       "x-api-key": apiKey
     });
 
-    //POST - create item on server
     return this.http.post<User>(apiUsers, user, {
       headers
     })

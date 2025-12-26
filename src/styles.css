@@ -4,4 +4,9 @@
 
 .bg-color { 
    background-color: black;
+   background-image: url('assets/img/backgroundPic.jpg');
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
+   min-height: 100vh;
 }

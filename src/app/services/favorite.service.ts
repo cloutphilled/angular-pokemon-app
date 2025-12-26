@@ -1,6 +1,6 @@
 import { HttpClient, HttpHandler, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, tap } from 'rxjs';
+import { Observable, of, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Pokemon } from '../models/pokemons.models';
 import { User } from '../models/user.model';
@@ -40,6 +40,12 @@ export class FavoriteService {
       this.userService.removeFromFavorite(pokemonId);
     } else {
       this.userService.addToFavorites(pokemon);
+    }
+
+    // Use localStorage - just update the user service which handles storage
+    if (apiUsers === 'localStorage') {
+      this.userService.user = user;
+      return of(user);
     }
 
     const headers = new HttpHeaders ({

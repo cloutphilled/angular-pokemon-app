@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'grass-pattern': "url('/assets/img/Grass_Type.png')",
+        'grass-pattern': "url('assets/img/Grass_Type.png')",
       }
     },
   },
